@@ -13,33 +13,34 @@ public class meterManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     public void AdjustA(int a)
     {
         staticResources.GetComponent<staticResources>().a += a;
-        print(staticResources.GetComponent<staticResources>().a);
         uiUpdater.GetComponent<UIUpdater>().changeSize(meterA, staticResources.GetComponent<staticResources>().a);
     }
     public void AdjustB(int a)
     {
         staticResources.GetComponent<staticResources>().b += a;
-        uiUpdater.GetComponent<UIUpdater>().changeSize(meterB, a);
+        uiUpdater.GetComponent<UIUpdater>().changeSize(meterB, staticResources.GetComponent<staticResources>().a);
     }
     public void AdjustC(int a)
     {
         staticResources.GetComponent<staticResources>().c += a;
-        uiUpdater.GetComponent<UIUpdater>().changeSize(meterC, a);
+        uiUpdater.GetComponent<UIUpdater>().changeSize(meterC, staticResources.GetComponent<staticResources>().a);
     }
+
     public void AdjustD(int a)
     {
         staticResources.GetComponent<staticResources>().d += a;
-        uiUpdater.GetComponent<UIUpdater>().changeSize(meterD, a);
+        uiUpdater.GetComponent<UIUpdater>().changeSize(meterD, staticResources.GetComponent<staticResources>().a);
     }
+
 }
