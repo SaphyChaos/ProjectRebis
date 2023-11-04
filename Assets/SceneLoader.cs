@@ -20,4 +20,8 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene("enterTextWorld");
     }
+    public void LoadSampleScene()
+    {
+        SceneManager.LoadScene("SampleScene");
+    }
 }

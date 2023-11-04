@@ -372,6 +372,12 @@ MonoBehaviour:
         destinationDialogueID: 6
         isConnector: 0
         priority: 2
+      - originConversationID: 1
+        originDialogueID: 1
+        destinationConversationID: 1
+        destinationDialogueID: 8
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -706,11 +712,12 @@ MonoBehaviour:
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
-        value: gootby
+        value: switch scene
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: ebnd
+        value: the text appears on the next scene because the dialogue system is
+          persistent
         type: 0
         typeString: CustomFieldType_Text
       - title: Parenthetical
@@ -748,7 +755,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 890.3545
+        x: 879.58527
         y: 167.51373
         width: 160
         height: 30
@@ -823,9 +830,74 @@ MonoBehaviour:
         y: 164.70012
         width: 160
         height: 30
+    - id: 8
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Pictures
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: gootby
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: ebnd
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Parenthetical
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Audio Files
+        value: '[]'
+        type: 3
+        typeString: CustomFieldType_Files
+      - title: Video File
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 1
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 1049.8466
+        y: 168.99998
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 98.97191, y: 20.55114}
-    canvasZoom: 1.2999996
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 1.0299999
   syncInfo:
     syncActors: 0
     syncItems: 0

@@ -24,28 +24,24 @@ public class meterManager : MonoBehaviour
     }
     public void AdjustA(int val)
     {
-        staticResources.GetComponent<staticResources>().a += val;
-        uiUpdater.GetComponent<UIUpdater>().changeSize(meterA, staticResources.GetComponent<staticResources>().a);
-        DialogueLua.SetVariable("A", staticResources.GetComponent<staticResources>().a);
+        DialogueLua.SetVariable("A", DialogueLua.GetVariable("A").asInt + val);
+        uiUpdater.GetComponent<UIUpdater>().changeSize(meterA, DialogueLua.GetVariable("A").asInt);
     }
     public void AdjustB(int val)
     {
-        staticResources.GetComponent<staticResources>().b += val;
-        uiUpdater.GetComponent<UIUpdater>().changeSize(meterB, staticResources.GetComponent<staticResources>().b);
-        DialogueLua.SetVariable("B", staticResources.GetComponent<staticResources>().b);
+        DialogueLua.SetVariable("B", DialogueLua.GetVariable("B").asInt + val);
+        uiUpdater.GetComponent<UIUpdater>().changeSize(meterB, DialogueLua.GetVariable("B").asInt);
     }
     public void AdjustC(int val)
     {
-        staticResources.GetComponent<staticResources>().c += val;
-        uiUpdater.GetComponent<UIUpdater>().changeSize(meterC, staticResources.GetComponent<staticResources>().c);
-        DialogueLua.SetVariable("C", staticResources.GetComponent<staticResources>().c);
+        DialogueLua.SetVariable("C", DialogueLua.GetVariable("C").asInt + val);
+        uiUpdater.GetComponent<UIUpdater>().changeSize(meterB, DialogueLua.GetVariable("C").asInt);
     }
 
     public void AdjustD(int val)
     {
-        staticResources.GetComponent<staticResources>().d += val;
-        uiUpdater.GetComponent<UIUpdater>().changeSize(meterD, staticResources.GetComponent<staticResources>().d);
-        DialogueLua.SetVariable("D", staticResources.GetComponent<staticResources>().d);
+        DialogueLua.SetVariable("D", DialogueLua.GetVariable("D").asInt + val);
+        uiUpdater.GetComponent<UIUpdater>().changeSize(meterB, DialogueLua.GetVariable("D").asInt);
     }
 
 }
