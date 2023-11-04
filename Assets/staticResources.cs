@@ -11,11 +11,11 @@ public class staticResources : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        DontDestroyOnLoad(this.gameObject);
-        a = 100;
-        b = 100;
-        c = 100;
-        d = 100;
+        DontDestroyOnLoad(this.gameObject); //this makes the gameobject attached to this script stick around after
+        //a = 100;
+        //b = 100;
+        //c = 100;
+        //d = 100;
     }
 
     // Update is called once per frame

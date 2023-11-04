@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 935899b62f48ae5498594680ed17d133, type: 3}
-  m_Name: Dialogue Database
+  m_Name: Dialogue Database (Auto-Backup)
   m_EditorClassIdentifier: 
   version: 
   author: 
@@ -680,7 +680,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 531.8196
-        y: 165.42737
+        y: 163.11967
         width: 160
         height: 30
     - id: 6
@@ -729,10 +729,6 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
-      - title: EventGuid
-        value: 5a5d019b-a943-4cde-9d9d-bebff7e61ce2
-        type: 0
-        typeString: 
       conversationID: 1
       isRoot: 0
       isGroup: 0
@@ -748,7 +744,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 890.3545
+        x: 891.1237
         y: 167.51373
         width: 160
         height: 30
@@ -820,7 +816,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 712.82355
-        y: 164.70012
+        y: 163.93086
         width: 160
         height: 30
     entryGroups: []

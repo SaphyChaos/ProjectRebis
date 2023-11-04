@@ -1,11 +1,12 @@
+using PixelCrushers.DialogueSystem;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class meterManager : MonoBehaviour
 {
-    public GameObject staticResources;
-    public GameObject uiUpdater;
+    public GameObject staticResources; //grabbing the static resources gameobject
+    public GameObject uiUpdater; //grabbing the uiUpdater gameobject
     public GameObject meterA;
     public GameObject meterB;
     public GameObject meterC;
@@ -21,26 +22,30 @@ public class meterManager : MonoBehaviour
     {
 
     }
-    public void AdjustA(int a)
+    public void AdjustA(int val)
     {
-        staticResources.GetComponent<staticResources>().a += a;
+        staticResources.GetComponent<staticResources>().a += val;
         uiUpdater.GetComponent<UIUpdater>().changeSize(meterA, staticResources.GetComponent<staticResources>().a);
+        DialogueLua.SetVariable("A", staticResources.GetComponent<staticResources>().a);
     }
-    public void AdjustB(int a)
+    public void AdjustB(int val)
     {
-        staticResources.GetComponent<staticResources>().b += a;
-        uiUpdater.GetComponent<UIUpdater>().changeSize(meterB, staticResources.GetComponent<staticResources>().a);
+        staticResources.GetComponent<staticResources>().b += val;
+        uiUpdater.GetComponent<UIUpdater>().changeSize(meterB, staticResources.GetComponent<staticResources>().b);
+        DialogueLua.SetVariable("B", staticResources.GetComponent<staticResources>().b);
     }
-    public void AdjustC(int a)
+    public void AdjustC(int val)
     {
-        staticResources.GetComponent<staticResources>().c += a;
-        uiUpdater.GetComponent<UIUpdater>().changeSize(meterC, staticResources.GetComponent<staticResources>().a);
+        staticResources.GetComponent<staticResources>().c += val;
+        uiUpdater.GetComponent<UIUpdater>().changeSize(meterC, staticResources.GetComponent<staticResources>().c);
+        DialogueLua.SetVariable("C", staticResources.GetComponent<staticResources>().c);
     }
 
-    public void AdjustD(int a)
+    public void AdjustD(int val)
     {
-        staticResources.GetComponent<staticResources>().d += a;
-        uiUpdater.GetComponent<UIUpdater>().changeSize(meterD, staticResources.GetComponent<staticResources>().a);
+        staticResources.GetComponent<staticResources>().d += val;
+        uiUpdater.GetComponent<UIUpdater>().changeSize(meterD, staticResources.GetComponent<staticResources>().d);
+        DialogueLua.SetVariable("D", staticResources.GetComponent<staticResources>().d);
     }
 
 }
