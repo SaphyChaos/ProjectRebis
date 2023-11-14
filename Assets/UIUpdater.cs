@@ -25,7 +25,7 @@ public class UIUpdater : MonoBehaviour
 }
     public void changeSize(GameObject myObject, float myValue)
     {
-        print(myValue / 100);
+        //print(myValue / 100);
         myObject.GetComponent<Slider>().value = myValue/100;
     }
 }
