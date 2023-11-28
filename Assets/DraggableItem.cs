@@ -8,9 +8,11 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 {
     public Image image;
     Transform parentAfterDrag;
+    public Image DropTarget;
     public void OnBeginDrag(PointerEventData eventData)
     {
         Debug.Log("begin drag");
+        DropTarget.enabled = true;
         parentAfterDrag = transform.parent;
         transform.SetParent(transform.root);
         transform.SetAsLastSibling();
@@ -26,6 +28,7 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public void OnEndDrag(PointerEventData eventData)
     {
         Debug.Log("end drag");
+        DropTarget.enabled = false;
         transform.SetParent(parentAfterDrag);
         image.raycastTarget = true;
     }

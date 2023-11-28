@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+//using PixelCrushers.DialogueSystem;
 
 public class SceneLoader : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class SceneLoader : MonoBehaviour
     }
     public void LoadEnterTextWorld()
     {
+        //PixelCrushers.SceneTransitionManager.EnterScene("enterTextWorld");
         SceneManager.LoadScene("enterTextWorld");
     }
     public void LoadSampleScene()
