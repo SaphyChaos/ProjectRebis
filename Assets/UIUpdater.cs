@@ -6,14 +6,14 @@ using UnityEngine.UI;
 public class UIUpdater : MonoBehaviour
 {
     public GameObject meterManager;
-    public GameObject ingredientBar;
-    public GameObject dragOffPoint;
-    public Vector3 ingredientBarPreviousPos;
+    public GameObject IngredientScreen;
+    //public GameObject TalkPrePotionButton;
+    public GameObject TalkPostPotionButton;
     // Start is called before the first frame update
     void Start()
     {
-        ingredientBarPreviousPos = new Vector3(ingredientBar.transform.position.x, ingredientBar.transform.position.y, ingredientBar.transform.position.z);
-        //moveIngredientsOut();
+        IngredientScreen.SetActive(false);
+        TalkPostPotionButton.SetActive(false);
     }
     
     // Update is called once per frame
@@ -31,6 +31,21 @@ public class UIUpdater : MonoBehaviour
     {
         //print(myValue / 100);
         myObject.GetComponent<Slider>().value = myValue/100;
+    }
+    public void IngredientScreenToggle()
+    {
+        if (IngredientScreen.activeSelf == true)
+        {
+            IngredientScreen.SetActive(false);
+        }
+        else
+        {
+            IngredientScreen.SetActive(true);
+        }
+    }
+    public void SetTalkPostPotionButton()//When you talk before giving a potion you get the same intro dialogue, if you talk post potion, you hear the results of the potion. These are two different buttons that look the same! but we swap out which is enabled. ooo!
+    {
+            TalkPostPotionButton.SetActive(true);
     }
     /*
     public void moveIngredientsOut()
