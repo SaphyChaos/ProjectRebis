@@ -9,11 +9,13 @@ public class UIUpdater : MonoBehaviour
     public GameObject IngredientScreen;
     //public GameObject TalkPrePotionButton;
     public GameObject TalkPostPotionButton;
+    private bool PostPotion;
     // Start is called before the first frame update
     void Start()
     {
         IngredientScreen.SetActive(false);
-        TalkPostPotionButton.SetActive(false);
+        //PostPotion = false;
+        LoadUIState();
     }
     
     // Update is called once per frame
@@ -26,7 +28,8 @@ public class UIUpdater : MonoBehaviour
         meterManager.GetComponent<meterManager>().AdjustB(0);
         meterManager.GetComponent<meterManager>().AdjustC(0);
         meterManager.GetComponent<meterManager>().AdjustD(0);
-}
+        TalkPostPotionButton.SetActive(PostPotion);
+    }
     public void changeSize(GameObject myObject, float myValue)
     {
         //print(myValue / 100);
@@ -45,7 +48,15 @@ public class UIUpdater : MonoBehaviour
     }
     public void SetTalkPostPotionButton()//When you talk before giving a potion you get the same intro dialogue, if you talk post potion, you hear the results of the potion. These are two different buttons that look the same! but we swap out which is enabled. ooo!
     {
-            TalkPostPotionButton.SetActive(true);
+        PostPotion = true;
+    }
+    public void SaveUIState()
+    {
+        ES3.Save("PostPotion", PostPotion);
+    }
+    public void LoadUIState()
+    {
+        PostPotion = ES3.Load<bool>("PostPotion", false);
     }
     /*
     public void moveIngredientsOut()
